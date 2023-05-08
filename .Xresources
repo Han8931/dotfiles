@@ -14,7 +14,6 @@ XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
-!background:                      #222D31
 *background:                      #0a0f1f
 *foreground:                      #d8d8d8
 *fading:                          8
@@ -24,7 +23,7 @@ XTerm*selectToClipboard: true
 *pointerColorForeground:          #16A085
 
 *.alpha: .81
-*.font: monospace:size=15
+*.font:	Liberation Mono:pixelsize=17:antialias=true:autohint=true;
 
 !! black dark/light
 *color0:                          #222D31
