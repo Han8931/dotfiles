@@ -163,4 +163,4 @@ alias calc='calcurse'
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-PS1="\[\e]2;\u@\H \w\a\e[32;1m\][han@ \W]$\[\e[0m\] "
+PS1="\[\e]2;\u@\H \w\a\e[32;1m\][han@xyz \W]$\[\e[0m\] "
