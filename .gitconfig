@@ -1,0 +1,14 @@
+[user]
+	email = tabularasa8931@gmail.com
+	name = Han
+[core]
+	editor = nvim
+	autocrlf = input
+[difftool]
+	prompt = true
+[diff]
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[credential]
+	helper = cache --timeout=3000
