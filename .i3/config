@@ -428,6 +428,9 @@ bindsym $mod+Shift+x exec --no-startup-id blurlock
 bindsym $mod+m move workspace to output left
 bindsym $mod+c exec --no-startup-id firefox https://www.coursera.org/
 exec_always --no-startup-id setxkbmap -layout us -option caps:escape
+#exec_always --no-startup-id setxkbmap -layout us -option caps:grave
+#exec_always --no-startup-id setxkbmap -layout us -option caps:escape
+exec_always --no-startup-id setxkbmap -layout us -option caps:swapescape
 exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of eDP
 
 exec_always --no-startup-id ibus-daemon -d -r -x 
