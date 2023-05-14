@@ -23,8 +23,7 @@ XTerm*selectToClipboard: true
 *pointerColorForeground:          #16A085
 
 *.alpha: .81
-!*.font:	Liberation Mono:pixelsize=22:antialias=true:autohint=true;
-*.font:	Liberation Mono:pixelsize=18:antialias=true:autohint=true;
+*.font:	Liberation Mono:pixelsize=20:antialias=true:autohint=true;
 
 !! black dark/light
 *color0:                          #222D31
