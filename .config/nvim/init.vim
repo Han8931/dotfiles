@@ -50,8 +50,10 @@ call plug#begin()
     Plug 'nvim-lua/plenary.nvim'
 	Plug 'sharkdp/fd'
 
-	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+	" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 	Plug 'lervag/vimtex'
+
+	Plug 'ellisonleao/glow.nvim'
 
 	" Plug 'nvim-tree/nvim-web-devicons' " optional
 	" Plug 'nvim-tree/nvim-tree.lua'
@@ -120,6 +122,7 @@ map <leader>h :highlight Normal guibg=#2e3440<CR>
 " nnoremap fzf :Telescope find_files<CR>
 " cnoremap fzf Telescope find_files
 
+
 " In case of using nvim-tree
 " lua << EOF
 " vim.g.loaded_netrw = 1
@@ -130,3 +133,8 @@ map <leader>h :highlight Normal guibg=#2e3440<CR>
 
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 autocmd BufRead,BufNewFile ~/.local/share/calcurse/notes* set filetype=markdown
+
+lua << EOF
+require('glow').setup()
+EOF
+
