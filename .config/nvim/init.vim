@@ -53,7 +53,7 @@ call plug#begin()
 	" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 	Plug 'lervag/vimtex'
 
-	Plug 'ellisonleao/glow.nvim'
+	" Plug 'ellisonleao/glow.nvim'
 
 	" Plug 'nvim-tree/nvim-web-devicons' " optional
 	" Plug 'nvim-tree/nvim-tree.lua'
@@ -134,7 +134,10 @@ map <leader>h :highlight Normal guibg=#2e3440<CR>
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 autocmd BufRead,BufNewFile ~/.local/share/calcurse/notes* set filetype=markdown
 
-lua << EOF
-require('glow').setup()
-EOF
+" lua << EOF
+" require('glow').setup({
+"   style = "dark",
+"   width = 150,
+" })
+" EOF
 
