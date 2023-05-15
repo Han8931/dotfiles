@@ -159,6 +159,7 @@ alias wifi='nmtui'
 alias bluetooth='bluetoothctl'
 alias volume='pulsemixer'
 alias calc='calcurse'
+alias pgrep='pdfgrep -HiR --color=auto'
 
 export EDITOR='nvim'
 export VISUAL='nvim'
