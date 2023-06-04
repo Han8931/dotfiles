@@ -29,7 +29,7 @@ inoremap [] [<++>]<++><Esc>/<++><Enter>"_c4l
 
 inoremap ;/ \frac{}{<++>}<Esc><Esc>F{F{a
 inoremap ;M \sum_{}^{<++>}<Esc><Esc>F{F{a
-inoremap ;EFI \figure[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>F{F{a
+inoremap ;EFI \begin{figure}[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>F{F{a
 inoremap ;EAL \begin{align}<Enter><+align+><Enter>\label{eq:<++>}<Enter>\end{align}<++><Esc>/<+align+><Enter>"_c9l
 inoremap ;EAN \begin{align*}<Enter>\end{align*}<++><Esc>FnO
 

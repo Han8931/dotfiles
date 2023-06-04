@@ -118,6 +118,13 @@ map <leader>t :Tagbar<CR>
 map <leader>p :highlight Normal guibg=none<CR>
 map <leader>h :highlight Normal guibg=#2e3440<CR>
 
+function! s:TERMINAL(...)
+	execute printf('belowright split | resize 10 | terminal')
+endfunction
+
+command TERM call s:TERMINAL()
+
+
 " nnoremap <C-p> :Telescope live_grep<CR>
 " nnoremap fzf :Telescope find_files<CR>
 " cnoremap fzf Telescope find_files

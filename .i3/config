@@ -283,7 +283,7 @@ exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+# exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -426,12 +426,13 @@ mode "$mode_gaps_outer" {
 # Custom
 bindsym $mod+Shift+x exec --no-startup-id blurlock
 bindsym $mod+m move workspace to output left
-bindsym $mod+c exec --no-startup-id firefox https://www.coursera.org/
+bindsym $mod+c exec --no-startup-id qutebrowser https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
 exec_always --no-startup-id setxkbmap -layout us -option caps:escape
 #exec_always --no-startup-id setxkbmap -layout us -option caps:grave
 #exec_always --no-startup-id setxkbmap -layout us -option caps:escape
 exec_always --no-startup-id setxkbmap -layout us -option caps:swapescape
 exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of eDP
+# exec_always --no-startup-id sh ~/.i3/polybar.sh
 
 exec_always --no-startup-id ibus-daemon -d -r -x 
 
