@@ -1,0 +1,1 @@
+command R w|!./main

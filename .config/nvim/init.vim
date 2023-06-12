@@ -1,7 +1,7 @@
 let mapleader =","
 
 set number                  " add line numbers
-set relativenumber
+" set relativenumber
 
 set nocompatible            " disable compatibility to old-time vi
 set hlsearch                " highlight search 
