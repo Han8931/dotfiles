@@ -5,4 +5,4 @@ command Cbuild w|!cargo build
 
 iabbrev main fn main() {<Enter>}
 iabbrev print println!("{<++>}",<++>);<Esc>14h
-iabbrev if if <++> {<++><Enter>}else {<++><Enter>}<Esc>37h
+iabbrev if if <++> {<++>}<++>else {<++>}<Esc>29h
