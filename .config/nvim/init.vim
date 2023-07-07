@@ -42,6 +42,7 @@ call plug#begin()
     Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
     Plug 'windwp/nvim-autopairs'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 	" Just install sudo pacman -S ripgrep  " To use ripgrep
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
