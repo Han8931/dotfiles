@@ -29,7 +29,7 @@ inoremap [] [<++>]<++><Esc>/<++><Enter>"_c4l
 
 inoremap ;/ \frac{}{<++>}<Esc><Esc>F{F{a
 inoremap ;M \sum_{}^{<++>}<Esc><Esc>F{F{a
-inoremap ;EFI \figure[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>F{F{a
+inoremap ;EFI \begin{figure}[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>F{F{a
 inoremap ;EAL \begin{align}<Enter><+align+><Enter>\label{eq:<++>}<Enter>\end{align}<++><Esc>/<+align+><Enter>"_c9l
 inoremap ;EAN \begin{align*}<Enter>\end{align*}<++><Esc>FnO
 
@@ -37,7 +37,7 @@ inoremap ;EIT \begin{itemize}<Enter>\item<space><+item+><Enter>\end{itemize}<++>
 inoremap ;EEN \begin{enumerate}<Enter>\item<space><+item+><Enter>\end{enumerate}<++><Esc>/<+item+><Enter>"_c8l
 inoremap ;ALG \begin{algorithm}[<++>]<Enter>\begin{algorithmic}[1]<Enter>\State Initialize<++><Enter>\If{<++>}<Enter>\State<Enter>\ElsIf{<++>}<Enter>\State <++><Enter>\Else<Enter>\State <++><Enter>\EndIf<Enter>\State <++><Enter>\end{algorithmic}<Enter>\caption{<++>}<Enter>\label{alg:<++>}<Enter>\end{algorithm*}
 inoremap ;EBI \begin{<++>}<Enter>\end{<++>}<++>
-inoremap ;EFR \begin{frame}{<++>}<Enter>\end{frame}<++>
+inoremap ;EFR \begin{frame}{<++>}<Enter>\end{frame}<++><Esc>2k
 inoremap ;ETA \begin{table}[<++>]<Enter>\setlength{\tabcolsep}{<++>pt}<Enter>\caption{<++>}<Enter>\label{table:<++>}<Enter>\centering<Enter>\begin{tabular}{<++>llc}<Enter>\toprule<Enter>\midrule<Enter>\cmidrule(r){1-2}<Enter>\bottomrule<Enter>\end{tabular}<Enter>\end{table}<++>
 	
 inoremap ;FBF \textbf{<++>}<Esc>/<++><Enter>"_c4l

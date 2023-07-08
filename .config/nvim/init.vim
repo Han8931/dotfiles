@@ -1,7 +1,7 @@
 let mapleader =","
 
 set number                  " add line numbers
-set relativenumber
+" set relativenumber
 
 set nocompatible            " disable compatibility to old-time vi
 set hlsearch                " highlight search 
@@ -42,6 +42,7 @@ call plug#begin()
     Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
     Plug 'windwp/nvim-autopairs'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 	" Just install sudo pacman -S ripgrep  " To use ripgrep
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -117,6 +118,13 @@ map <leader>f :FZF<CR>
 map <leader>t :Tagbar<CR>
 map <leader>p :highlight Normal guibg=none<CR>
 map <leader>h :highlight Normal guibg=#2e3440<CR>
+
+function! s:TERMINAL(...)
+	execute printf('belowright split | resize 10 | terminal')
+endfunction
+
+command TERM call s:TERMINAL()
+
 
 " nnoremap <C-p> :Telescope live_grep<CR>
 " nnoremap fzf :Telescope find_files<CR>
