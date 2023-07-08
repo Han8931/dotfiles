@@ -432,8 +432,7 @@ exec_always --no-startup-id setxkbmap -layout us -option caps:escape
 #exec_always --no-startup-id setxkbmap -layout us -option caps:escape
 #exec_always --no-startup-id setxkbmap -layout us -option caps:swapescape
 exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of eDP
-# exec_always --no-startup-id sh ~/.i3/polybar.sh
-exec_always --no-startup-id sh ~/.i3/polybar.sh
+exec_always --no-startup-id sh ~/.config/i3/polybar.sh
 
 exec_always --no-startup-id ibus-daemon -d -r -x 
 
