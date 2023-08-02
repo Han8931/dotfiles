@@ -2,6 +2,7 @@ nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
 
+iabbrev == &=
 vmap <c-m> di$<esc>pa$
 inoremap ;a \alpha
 inoremap ;b \beta
@@ -29,9 +30,9 @@ inoremap [] [<++>]<++><Esc>/<++><Enter>"_c4l
 
 inoremap ;/ \frac{}{<++>}<Esc><Esc>F{F{a
 inoremap ;M \sum_{}^{<++>}<Esc><Esc>F{F{a
-inoremap ;EFI \begin{figure}[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>F{F{a
+inoremap ;EFI \begin{figure}[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>5k
 inoremap ;EAL \begin{align}<Enter><+align+><Enter>\label{eq:<++>}<Enter>\end{align}<++><Esc>/<+align+><Enter>"_c9l
-inoremap ;EAN \begin{align*}<Enter>\end{align*}<++><Esc>FnO
+inoremap ;EAN \begin{align*}<Enter><++><Enter>\end{align*}<++><Esc>2k
 
 inoremap ;EIT \begin{itemize}<Enter>\item<space><+item+><Enter>\end{itemize}<++><Esc>/<+item+><Enter>"_c8l
 inoremap ;EEN \begin{enumerate}<Enter>\item<space><+item+><Enter>\end{enumerate}<++><Esc>/<+item+><Enter>"_c8l
