@@ -191,7 +191,13 @@ export BROWSER='qutebrowser'
 
 alias newterm="st >/dev/null 2>&1 & disown"
 alias arxivpdf="process-arxiv-pdf"
-alias gitu="git add .;git commit -m 'Update' "
+
+git_update() {
+	update_msg="${1:-Update}"
+	git add .
+	git commit -m "$update_msg"
+} 
+alias gitu=git_update
 
 PS1="\[\e]2;\u@\H \w\a\e[32;1m\][\u@\[\033[33m\]x\[\033[31m\]y\[\033[36m\]z \[\033[34m\]\W]$\[\e[0m\] "
 . "$HOME/.cargo/env"
