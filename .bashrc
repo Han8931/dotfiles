@@ -185,12 +185,9 @@ alias volume='pulsemixer'
 alias calc='calcurse'
 alias pgrep='pdfgrep -HiR --color=auto'
 
-export EDITOR='nvim'
-export VISUAL='nvim'
-export BROWSER='qutebrowser'
-
 alias newterm="st >/dev/null 2>&1 & disown"
 alias arxivpdf="process-arxiv-pdf"
+alias monitor="xrandr --output eDP --off"
 
 git_update() {
 	update_msg="${1:-Update}"
@@ -198,6 +195,11 @@ git_update() {
 	git commit -m "$update_msg"
 } 
 alias gitu=git_update
+
+export EDITOR='nvim'
+export VISUAL='nvim'
+export BROWSER='qutebrowser'
+
 
 PS1="\[\e]2;\u@\H \w\a\e[32;1m\][\u@\[\033[33m\]x\[\033[31m\]y\[\033[36m\]z \[\033[34m\]\W]$\[\e[0m\] "
 . "$HOME/.cargo/env"
