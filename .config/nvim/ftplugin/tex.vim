@@ -18,8 +18,8 @@ inoremap ;s \sigma
 inoremap ;S \Sigma
 inoremap ;i \infty
 
-inoremap ;SSE \subsection{<++>}<Esc>5h
-inoremap ;SSS \section{<++>}<Enter>\label{sec:<++>}<++><Esc>1k0
+inoremap ;SSS \subsection{<++>}<Esc>5h
+inoremap ;SSE \section{<++>}<Enter>\label{sec:<++>}<++><Esc>1k0
 
 inoremap ;BBR \bigg(<+bbr+>\bigg)<++><Esc>/<+bbr+><Enter>"_c7l
 inoremap ;BSR \bigg[<+bsr+>\bigg]<++><Esc>/<+bsr+><Enter>"_c7l
@@ -34,6 +34,7 @@ inoremap ;M \sum_{}^{<++>}<Esc><Esc>F{F{a
 inoremap ;EFI \begin{figure}[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>5k
 inoremap ;EAL \begin{align}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{align}<++><Esc>3k
 inoremap ;EAN \begin{align*}<Enter><++><Enter>\end{align*}<++><Esc>2k
+inoremap ;PROG \begin{lstlisting}[language=Python]<Enter><++><Enter>\end{lstlisting}<++><Esc>3k
 
 inoremap ;EIT \begin{itemize}<Enter>\item<space><++><Enter>\end{itemize}<++><Esc>2k
 inoremap ;EEN \begin{enumerate}<Enter>\item<space><++><Enter>\end{enumerate}<++><Esc>2k
