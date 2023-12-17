@@ -6,6 +6,7 @@ cp -rs /home/han/.dotfiles/.config/mpv /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/mimeapps.list /home/han/.config/
 
 ln -s /home/han/.dotfiles/pacman.conf /etc/
+ln -s /home/han/.dotfiles/firefox_link/youtube /usr/bin/
 ln -s /home/han/.dotfiles/.gitconfig /home/han/
 ln -s /home/han/.dotfiles/.xinitrc /home/han/
 ln -s /home/han/.dotfiles/.Xmodmap /home/han/

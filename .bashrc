@@ -207,8 +207,6 @@ git_update_note() {
 } 
 alias gitnu=git_update_note
 
-
-
 export EDITOR='nvim'
 export VISUAL='nvim'
 export BROWSER='qutebrowser'
