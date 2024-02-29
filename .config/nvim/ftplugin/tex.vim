@@ -36,6 +36,7 @@ inoremap ;EAL \begin{align}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{align}<+
 inoremap ;EAN \begin{align*}<Enter><++><Enter>\end{align*}<++><Esc>2k
 inoremap ;PRG \begin{lstlisting}[language=Python]<Enter><++><Enter>\end{lstlisting}<++><Esc>3k
 
+inoremap ;MAT \begin{bmatrix}<Enter><++><Enter>\end{bmatrix}<Esc>2k
 inoremap ;EIT \begin{itemize}<Enter>\item<space><++><Enter>\end{itemize}<++><Esc>2k
 inoremap ;EEN \begin{enumerate}<Enter>\item<space><++><Enter>\end{enumerate}<++><Esc>2k
 inoremap ;ALG \begin{algorithm}[<++>]<Enter>\begin{algorithmic}[1]<Enter>\State Initialize<++><Enter>\If{<++>}<Enter>\State<Enter>\ElsIf{<++>}<Enter>\State <++><Enter>\Else<Enter>\State <++><Enter>\EndIf<Enter>\State <++><Enter>\end{algorithmic}<Enter>\caption{<++>}<Enter>\label{alg:<++>}<Enter>\end{algorithm*}

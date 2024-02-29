@@ -148,8 +148,31 @@ nnoremap ,<space> :nohlsearch<CR>
 map <leader>g :Rg<CR>
 map <leader>f :FZF<CR>
 map <leader>t :Tagbar<CR>
-map <leader>p :highlight Normal guibg=none<CR>
-map <leader>h :highlight Normal guibg=#2e3440<CR>
+" map <leader>p :highlight Normal guibg=none<CR>
+" map <leader>h :highlight Normal guibg=#2e3440<CR>
+
+let s:normal_bg_color_toggle = 0
+let s:default_bg_color = ""
+
+function! ToggleNormalBGColor()
+    if s:normal_bg_color_toggle == 0
+        " Capture the default background color
+        let s:default_bg_color = synIDattr(hlID("Normal"), "bg")
+
+        " Set background color to none
+        highlight Normal guibg=none
+        let s:normal_bg_color_toggle = 1
+    else
+        " Restore default background color
+        execute "highlight Normal guibg=" . s:default_bg_color
+        let s:normal_bg_color_toggle = 0
+    endif
+endfunction
+
+nnoremap <leader>p :call ToggleNormalBGColor()<CR>
+
+
+
 
 function! s:TERMINAL(...)
 	execute printf('belowright split | resize 10 | terminal')
