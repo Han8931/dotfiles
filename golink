@@ -1,0 +1,16 @@
+#!/bin/sh
+
+browser="firefox"
+choices="youtube\ngithub\nchatgpt\ngmail"
+chosen=$(echo -e "$choices" | dmenu -i -p "Go to ...")
+
+case "$chosen" in
+	youtube) $browser https://www.youtube.com/ >/dev/null 2>&1;;
+	github) $browser https://github.com/ >/dev/null 2>&1;;
+	chatgpt) $browser https://chat.openai.com/ >/dev/null 2>&1;;
+	gmail) $browser https://mail.google.com >/dev/null 2>&1;;
+esac
+
+	
+
+
