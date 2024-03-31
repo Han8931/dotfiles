@@ -196,6 +196,17 @@ git_update() {
 } 
 alias gitu=git_update
 
+git_update_note() {
+	file_name=$(grep -oP '\\textbf{\\Huge\s*\K(.*?)(?=\})' main.tex | sed 's/\s/_/g')
+	# echo $file_name
+	cp main.pdf ../$file_name.pdf
+
+	update_msg="${1:-Update}"
+	git add .
+	git commit -m "$update_msg"
+} 
+alias gitnu=git_update_note
+
 export EDITOR='nvim'
 export VISUAL='nvim'
 export BROWSER='qutebrowser'

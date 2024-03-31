@@ -32,7 +32,6 @@ bindsym $mod+Return exec st
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_run
 
 # launch categorized menu

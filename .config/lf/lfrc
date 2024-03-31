@@ -56,6 +56,7 @@ map gm :cd ~/Han/
 map gl :cd ~/Han/LectureVideos/
 map gc :cd /home/han/Han/CodingPractice 
 map gb :cd /home/han/Books
+map gn :cd /home/han/Han/StudyNotes
 
 # define a custom 'rename' command without prompt for overwrite
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
@@ -78,7 +79,7 @@ cmd delete ${{
 }}
 
 map D delete
-map V push :!nvim<space>
+# map V push :!nvim<space>
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
