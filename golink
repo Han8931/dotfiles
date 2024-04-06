@@ -1,16 +1,5 @@
 #!/bin/sh
 
-#browser="firefox"
-#choices="youtube\ngithub\nchatgpt\ngmail"
-#chosen=$(echo -e "$choices" | dmenu -i -p "Go to ...")
-
-#case "$chosen" in
-#	youtube) $browser https://www.youtube.com/ >/dev/null 2>&1;;
-#	github) $browser https://github.com/ >/dev/null 2>&1;;
-#	chatgpt) $browser https://chat.openai.com/ >/dev/null 2>&1;;
-#	gmail) $browser https://mail.google.com >/dev/null 2>&1;;
-#esac
-
 browser="firefox"
 # Dynamically create choices from urls.txt, separated by newline characters
 # choices=$(awk '{print $1}' urls.txt | tr '\n' '\\' | sed 's/\\$//')
@@ -18,7 +7,6 @@ choices=$(awk '{printf "%s\\n", $1}' ~/.dotfiles/urls.txt | sed '$s/\\n$//')
 
 # Use dmenu to present choices to the user. Note: echo -e to interpret backslashes as newline characters.
 chosen=$(echo -e "$choices" | dmenu -i -p "Go to ...")
-
 
 # Ensure chosen is not empty
 if [ -z "$chosen" ]; then
