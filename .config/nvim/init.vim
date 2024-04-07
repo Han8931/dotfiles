@@ -81,10 +81,13 @@ call plug#begin()
 	Plug 'junegunn/fzf.vim'
 
     Plug 'nvim-lua/plenary.nvim'
+
+
 	Plug 'sharkdp/fd'
 
 	" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 	Plug 'lervag/vimtex'
+
 
 	" Plug 'ellisonleao/glow.nvim'
 

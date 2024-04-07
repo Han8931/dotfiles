@@ -3,3 +3,4 @@ github https://github.com/
 chatgpt https://chat.openai.com/
 gmail https://mail.google.com/
 overleaf https://www.overleaf.com/
+perplexity https://www.perplexity.ai/
