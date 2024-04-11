@@ -1,11 +1,48 @@
 #!/bin/sh
 
+#browser="firefox"
+## Dynamically create choices from urls.txt, separated by newline characters
+## choices=$(awk '{print $1}' urls.txt | tr '\n' '\\' | sed 's/\\$//')
+#choices=$(awk '{printf "%s\\n", $1}' ~/.dotfiles/urls.txt | sed '$s/\\n$//')
+
+## Use dmenu to present choices to the user. Note: echo -e to interpret backslashes as newline characters.
+#chosen=$(echo -e "$choices" | dmenu -i -p "Go to ...")
+
+## Ensure chosen is not empty
+#if [ -z "$chosen" ]; then
+#  echo "No option was chosen." >&2
+#  exit 1
+#fi
+
+## Attempt to extract the URL corresponding to the chosen option
+#url=$(awk -v chosen="$chosen" '$1 == chosen {print $2}' ~/.dotfiles/urls.txt)
+
+#if [ -z "$url" ]; then
+#    # If no URL was found, prompt the user to add a new one
+#    echo "No URL found for choice: $chosen"
+#    new_url=$(dmenu -p "Enter new URL for $chosen:")
+
+#    # Check if the user entered a new URL
+#    if [ -n "$new_url" ]; then
+#        # Append the new choice and URL to urls.txt
+#        echo "$chosen $new_url" >> ~/.dotfiles/urls.txt
+#        url=$new_url
+#    else
+#        echo "No URL entered. Exiting."
+#        exit 1
+#    fi
+#fi
+
+## Open the chosen URL in Firefox
+#$browser "$url" >/dev/null 2>&1
+
+# Set default browser
 browser="firefox"
-# Dynamically create choices from urls.txt, separated by newline characters
-# choices=$(awk '{print $1}' urls.txt | tr '\n' '\\' | sed 's/\\$//')
+
+# Extract choices from urls.txt
 choices=$(awk '{printf "%s\\n", $1}' ~/.dotfiles/urls.txt | sed '$s/\\n$//')
 
-# Use dmenu to present choices to the user. Note: echo -e to interpret backslashes as newline characters.
+# Use dmenu to present choices to the user
 chosen=$(echo -e "$choices" | dmenu -i -p "Go to ...")
 
 # Ensure chosen is not empty
@@ -14,7 +51,7 @@ if [ -z "$chosen" ]; then
   exit 1
 fi
 
-# Attempt to extract the URL corresponding to the chosen option
+# Extract the URL corresponding to the chosen option
 url=$(awk -v chosen="$chosen" '$1 == chosen {print $2}' ~/.dotfiles/urls.txt)
 
 if [ -z "$url" ]; then
@@ -33,5 +70,23 @@ if [ -z "$url" ]; then
     fi
 fi
 
-# Open the chosen URL in Firefox
-$browser "$url" >/dev/null 2>&1
+# Determine if the URL expects search terms by looking for common search query parameters
+if echo "$url" | grep -Eq "="; then
+    # Prompt for search terms if applicable
+    search_terms=$(dmenu -p "Enter search terms:")
+
+    # Construct full URL with search terms if any were entered
+    if [ -n "$search_terms" ]; then
+        # Replace spaces with URL encoding or plus (+) as necessary for the URL structure
+        encoded_terms=$(echo "$search_terms" | sed -e 's/ /+/g')
+        full_url="${url}${encoded_terms}"
+    else
+        full_url="$url"
+    fi
+else
+    # If no search terms needed, use the base URL
+    full_url="$url"
+fi
+
+# Open the full URL in the browser
+$browser "$full_url" >/dev/null 2>&1
