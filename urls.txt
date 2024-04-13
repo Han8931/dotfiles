@@ -1,0 +1,6 @@
+youtube https://www.youtube.com/results?search_query=
+github https://github.com/search?q=
+chatgpt https://chat.openai.com/
+gmail https://mail.google.com/
+overleaf https://www.overleaf.com/
+perplexity https://www.perplexity.ai/
