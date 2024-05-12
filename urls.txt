@@ -1,6 +1,9 @@
 youtube https://www.youtube.com/results?search_query=
+google https://www.google.com/search?q=
 github https://github.com/search?q=
-chatgpt https://chat.openai.com/
 gmail https://mail.google.com/
+chatgpt https://chat.openai.com/
 overleaf https://www.overleaf.com/
 perplexity https://www.perplexity.ai/
+blog https://han8931.github.io/
+drive https://drive.google.com/drive/u/0/my-drive
