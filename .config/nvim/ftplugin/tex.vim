@@ -21,8 +21,8 @@ inoremap ;i \infty
 inoremap ;SSS \subsection{<++>}<Esc>5h
 inoremap ;SSE \section{<++>}<Enter>\label{sec:<++>}<++><Esc>1k0
 
-inoremap ;BBR \bigg(<+bbr+>\bigg)<++><Esc>/<+bbr+><Enter>"_c7l
-inoremap ;BSR \bigg[<+bsr+>\bigg]<++><Esc>/<+bsr+><Enter>"_c7l
+inoremap ;BRB \bigg(<+bbr+>\bigg)<++><Esc>/<+bbr+><Enter>"_c7l
+inoremap ;BSB \bigg[<+bsr+>\bigg]<++><Esc>/<+bsr+><Enter>"_c7l
 
 inoremap {} {<++>}<++><Esc>9h
 inoremap [] [<++>]<++><Esc>9h
