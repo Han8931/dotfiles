@@ -57,6 +57,7 @@ map gl :cd ~/Han/LectureVideos/
 map gc :cd /home/han/Han/CodingPractice 
 map gb :cd /home/han/Books
 map gn :cd /home/han/Han/StudyNotes
+map gp :cd /home/han/Papers
 
 # define a custom 'rename' command without prompt for overwrite
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
