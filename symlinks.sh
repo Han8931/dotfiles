@@ -3,6 +3,7 @@ cp -rs /home/han/.dotfiles/.config/nvim /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/zathura /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/i3 /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/mpv /home/han/.config/
+cp -rs /home/han/.dotfiles/.config/picom /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/mimeapps.list /home/han/.config/
 
 ln -s /home/han/.dotfiles/pacman.conf /etc/
