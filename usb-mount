@@ -1,0 +1,68 @@
+#!/bin/bash
+
+MOUNT_POINT="/home/han/USB"
+
+# Function to get the list of devices and their partitions
+get_devices() {
+    lsblk -lno NAME,SIZE,TYPE,MOUNTPOINT | grep -E "disk|part" | awk '{print "/dev/" $1 " (" $2 ")"}'
+}
+
+# Function to mount a selected device
+mount_device() {
+    local device=$1
+    local mount_point="$MOUNT_POINT"
+
+	echo $device
+    
+    # Create the mount point if it doesn't exist
+    if [ ! -d "$mount_point" ]; then
+        sudo mkdir -p "$mount_point"
+    fi
+    
+    # Detect the filesystem type
+    fs_type=$(lsblk -no FSTYPE "$device")
+
+    if [ -z "$fs_type" ]; then
+        notify-send "Mount" "Could not detect filesystem type for $device"
+        return
+    fi
+
+    # Mount the device
+    sudo mount "$device" "$mount_point"
+    
+    if [ $? -eq 0 ]; then
+        notify-send "Mount" "Mounted $device at $mount_point"
+    else
+        notify-send "Mount" "Failed to mount $device. Check dmesg for details."
+    fi
+}
+
+# Function to unmount a selected device
+unmount_device() {
+    local mount_point="$MOUNT_POINT"
+	#
+    # Unmount the device
+	echo $mount_point
+    sudo umount $mount_point
+    
+    if [ $? -eq 0 ]; then
+        notify-send "Unmount" "Unmounted device from $mount_point"
+    else
+        notify-send "Unmount" "Failed to unmount device from $mount_point"
+    fi
+}
+
+# Main script logic
+action=$(echo -e "mount\nunmount" | dmenu -p "Choose action:")
+
+if [ "$action" == "mount" ]; then
+    devices=$(get_devices)
+    selected_device=$(echo "$devices" | dmenu -l 10 -p "Select device to mount:" | awk '{print $1}')
+    if [ -n "$selected_device" ]; then
+        mount_device "$selected_device"
+    fi
+elif [ "$action" == "unmount" ]; then
+	unmount_device "$selected_device"
+else
+    notify-send "Error" "Invalid action selected"
+fi

@@ -200,6 +200,7 @@ git_update_note() {
 	file_name=$(grep -oP '\\textbf{\\Huge\s*\K(.*?)(?=\})' main.tex | sed 's/\s/_/g')
 	# echo $file_name
 	cp main.pdf ../$file_name.pdf
+	cp main.pdf /home/han/Han/SyncNotes/$file_name.pdf
 
 	update_msg="${1:-Update}"
 	git add .

@@ -1,6 +1,6 @@
 youtube https://www.youtube.com/results?search_query=
 google https://www.google.com/search?q=
-github https://github.com/search?q=
+github https://github.com/
 gmail https://mail.google.com/
 chatgpt https://chat.openai.com/
 overleaf https://www.overleaf.com/
