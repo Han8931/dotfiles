@@ -40,7 +40,7 @@ inoremap ;MAT \begin{bmatrix}<Enter><++><Enter>\end{bmatrix}<Esc>2k
 inoremap ;EIT \begin{itemize}<Enter>\item<space><++><Enter>\end{itemize}<++><Esc>2k
 inoremap ;EEN \begin{enumerate}<Enter>\item<space><++><Enter>\end{enumerate}<++><Esc>2k
 inoremap ;ALG \begin{algorithm}[<++>]<Enter>\begin{algorithmic}[1]<Enter>\State Initialize<++><Enter>\If{<++>}<Enter>\State<Enter>\ElsIf{<++>}<Enter>\State <++><Enter>\Else<Enter>\State <++><Enter>\EndIf<Enter>\State <++><Enter>\end{algorithmic}<Enter>\caption{<++>}<Enter>\label{alg:<++>}<Enter>\end{algorithm*}
-inoremap ;EBI \begin{<++>}<Enter>\end{<++>}<++><Esc>2k
+inoremap ;ENV \begin{<++>}<Enter>\end{<++>}<++><Esc>2k
 inoremap ;EFR \begin{frame}{<++>}<Enter>\end{frame}<++><Esc>2k
 inoremap ;ETA \begin{table}[<++>]<Enter>\setlength{\tabcolsep}{<++>pt}<Enter>\caption{<++>}<Enter>\label{table:<++>}<Enter>\centering<Enter>\begin{tabular}{<++>llc}<Enter>\toprule<Enter>\midrule<Enter>\cmidrule(r){1-2}<Enter>\bottomrule<Enter>\end{tabular}<Enter>\end{table}<++>
 	
