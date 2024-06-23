@@ -7,3 +7,4 @@ overleaf https://www.overleaf.com/
 perplexity https://www.perplexity.ai/
 blog https://han8931.github.io/
 drive https://drive.google.com/drive/u/0/my-drive
+libgen https://libgen.is/search.php?req=
