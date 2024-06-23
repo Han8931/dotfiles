@@ -36,6 +36,7 @@ inoremap ;EFI \begin{figure}[<++>]<Enter>\centering<Enter>\includegraphics[scale
 inoremap ;EAL \begin{align}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{align}<++><Esc>3k
 inoremap ;EAN \begin{align*}<Enter><++><Enter>\end{align*}<++><Esc>2k
 inoremap ;PRG \begin{lstlisting}[language=Python]<Enter><++><Enter>\end{lstlisting}<++><Esc>3k
+inoremap ;THE \begin{theorem}{<++>}<Enter><++><Enter>\end{theorem}<++><Esc>3k
 
 inoremap ;MAT \begin{bmatrix}<Enter><++><Enter>\end{bmatrix}<Esc>2k
 inoremap ;CAS \begin{cases}<Enter><++>&\text{<++>}\\<Enter><++>&\text{<++>}<Enter>\end{cases}<++><Esc>3k
