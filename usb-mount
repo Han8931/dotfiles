@@ -28,7 +28,7 @@ mount_device() {
     fi
 
     # Mount the device
-    sudo mount "$device" "$mount_point"
+    sudo mount -o uid=1000 "$device" "$mount_point"
     
     if [ $? -eq 0 ]; then
         notify-send "Mount" "Mounted $device at $mount_point"
