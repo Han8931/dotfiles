@@ -26,6 +26,7 @@ inoremap ;BSB \bigg[<+bsr+>\bigg]<++><Esc>/<+bsr+><Enter>"_c7l
 
 inoremap \{ \{<++>\}<++><Esc>11h
 inoremap {} {<++>}<++><Esc>9h
+inoremap () (<++>)<++><Esc>9h
 inoremap [] [<++>]<++><Esc>9h
 " inoremap {} {<++>}<Esc>/<++><Enter>"_c4l
 " inoremap {} {<++>}<++><Esc>/<++><Enter>"_c4l
