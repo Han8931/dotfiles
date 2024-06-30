@@ -179,6 +179,7 @@ lfcd () {
 
 alias nav='lfcd'
 alias vim='nvim'
+alias vmm='vim main.tex'
 alias wifi='nmtui'
 alias bluetooth='bluetoothctl'
 alias volume='pulsemixer'
