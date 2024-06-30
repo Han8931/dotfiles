@@ -1,7 +1,6 @@
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
-
 iabbrev == &=
 vmap <c-m> di$<esc>pa$
 inoremap ;a \alpha
@@ -28,6 +27,7 @@ inoremap \{ \{<++>\}<++><Esc>11h
 inoremap {} {<++>}<++><Esc>9h
 inoremap () (<++>)<++><Esc>9h
 inoremap [] [<++>]<++><Esc>9h
+inoremap $$ $<++>$<++><Esc>9h
 " inoremap {} {<++>}<Esc>/<++><Enter>"_c4l
 " inoremap {} {<++>}<++><Esc>/<++><Enter>"_c4l
 
@@ -64,10 +64,4 @@ function! s:PDFLATEX(...)
 	execute printf('!bibtex %s.aux', a:1)
 endfunction
 command! -nargs=1 PDF call s:PDFLATEX(<f-args>)
-
-" inoremap ;bbr {<++>}<Esc>
-" inoremap ;bsb {<++>}<Esc>
-
-"inoremap <space><space> /<++><Enter>
-"imap <space><space> /<++><Enter>
 
