@@ -23,7 +23,7 @@ inoremap ;SSE \section{<++>}<Enter>\label{sec:<++>}<++><Esc>1k0
 inoremap ;BRB \bigg(<+bbr+>\bigg)<++><Esc>/<+bbr+><Enter>"_c7l
 inoremap ;BSB \bigg[<+bsr+>\bigg]<++><Esc>/<+bsr+><Enter>"_c7l
 
-inoremap \{ \{\}<++><Esc>6h
+inoremap \{ \{\}<++><Esc>5hi
 inoremap {} {}<++><Esc>4hi
 inoremap () ()<++><Esc>4hi
 inoremap [] []<++><Esc>4hi
