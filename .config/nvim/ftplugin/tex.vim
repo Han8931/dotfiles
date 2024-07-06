@@ -1,8 +1,10 @@
+vmap <c-m> di$<Esc>pa$
+
+iabbrev == &=
+
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
-iabbrev == &=
-vmap <c-m> di$<esc>pa$
 inoremap ;a \alpha
 inoremap ;b \beta
 inoremap ;d \delta
@@ -22,6 +24,8 @@ inoremap ;SSE \section{<++>}<Enter>\label{sec:<++>}<++><Esc>1k0
 
 inoremap ;BRB \bigg(<+bbr+>\bigg)<++><Esc>/<+bbr+><Enter>"_c7l
 inoremap ;BSB \bigg[<+bsr+>\bigg]<++><Esc>/<+bsr+><Enter>"_c7l
+inoremap \left( \left(\right)<++><Esc>10hi
+inoremap \left[ \left[\right]<++><Esc>10hi
 
 inoremap \{ \{\}<++><Esc>5hi
 inoremap {} {}<++><Esc>4hi
