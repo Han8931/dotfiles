@@ -9,3 +9,7 @@ inoremap ;CLASS class <++>:<Enter>def __init__(self, <++>): <Enter><++><Esc>kk
 inoremap ;FOR for <++> in range(<++>): <Enter><++> <Esc>kk
 inoremap ;NAME if __name__ == "__main__":<Enter><++><Esc>kk
 inoremap ;FROM from  import <++><Esc>11hi
+
+inoremap "" ""<++><Esc>4hi
+inoremap {} {}<++><Esc>4hi
+inoremap () ()<++><Esc>4hi
