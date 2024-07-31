@@ -66,6 +66,7 @@ call plug#begin()
     Plug 'https://github.com/vim-airline/vim-airline' " Status Bar
     Plug 'https://github.com/preservim/nerdtree' " NERDTree
     Plug 'ryanoasis/vim-devicons' " Developer Icons
+	Plug 'nvim-tree/nvim-web-devicons'
     Plug 'junegunn/goyo.vim' " Status Bar
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'https://github.com/tpope/vim-commentary'
