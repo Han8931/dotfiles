@@ -38,17 +38,17 @@ inoremap $$ $$<++><Esc>4hi
 inoremap ;/ \frac{}{<++>}<Esc><Esc>F{F{a
 inoremap ;M \sum_{}^{<++>}<Esc><Esc>F{F{a
 inoremap ;EFI \begin{figure}[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>5k
-inoremap ;EAL \begin{align}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{align}<++><Esc>3k
-inoremap ;EAN \begin{align*}<Enter><++><Enter>\end{align*}<++><Esc>2k
-inoremap ;EQA \begin{equation}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{equation}<++><Esc>3k
+inoremap ;EAL \begin{align}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{align}<Enter><++><Esc>4k
+inoremap ;EAN \begin{align*}<Enter><++><Enter>\end{align*}<Enter><++><Esc>3k
+inoremap ;EQA \begin{equation}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{equation}<Enter><++><Esc>4k
 inoremap ;EQN \begin{equation*}<Enter><++><Enter>\end{equation*}<++><Esc>2k
-inoremap ;PRG \begin{lstlisting}[language=Python]<Enter><++><Enter>\end{lstlisting}<++><Esc>3k
+inoremap ;PRG \begin{lstlisting}[language=Python]<Enter><++><Enter>\end{lstlisting}<Enter><++><Esc>4k
 inoremap ;THE \begin{theorem}{<++>}<Enter><++><Enter>\end{theorem}<++><Esc>3k
 
 inoremap ;MAT \begin{bmatrix}<Enter><++><Enter>\end{bmatrix}<Esc>2k
-inoremap ;CAS \begin{cases}<Enter><++>&\text{<++>}\\<Enter><++>&\text{<++>}<Enter>\end{cases}<++><Esc>3k
-inoremap ;EIT \begin{itemize}<Enter>\item<space><++><Enter>\end{itemize}<++><Esc>2k
-inoremap ;EEN \begin{enumerate}<Enter>\item<space><++><Enter>\end{enumerate}<++><Esc>2k
+inoremap ;CAS \begin{cases}<Enter><++>&\text{<++>}\\<Enter><++>&\text{<++>}<Enter>\end{cases}<Enter><++><Esc>4k
+inoremap ;EIT \begin{itemize}<Enter>\item<space><++><Enter>\end{itemize}<Enter><++><Esc>3k
+inoremap ;EEN \begin{enumerate}<Enter>\item<space><++><Enter>\end{enumerate}<Enter><++><Esc>3k
 inoremap ;ALG \begin{algorithm}[<++>]<Enter>\begin{algorithmic}[1]<Enter>\State Initialize<++><Enter>\If{<++>}<Enter>\State<Enter>\ElsIf{<++>}<Enter>\State <++><Enter>\Else<Enter>\State <++><Enter>\EndIf<Enter>\State <++><Enter>\end{algorithmic}<Enter>\caption{<++>}<Enter>\label{alg:<++>}<Enter>\end{algorithm*}
 inoremap ;ENV \begin{<++>}<Enter>\end{<++>}<++><Esc>2k
 inoremap ;EFR \begin{frame}{<++>}<Enter>\end{frame}<++><Esc>2k
