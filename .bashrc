@@ -189,6 +189,7 @@ alias pgrep='pdfgrep -HiR --color=auto'
 alias newterm="st >/dev/null 2>&1 & disown"
 alias arxivpdf="process-arxiv-pdf"
 alias monitor="xrandr --output eDP --off"
+alias monitor-on="xrandr --output eDP --right-of HDMI-A-0 --auto"
 
 git_update() {
 	update_msg="${1:-Update}"
