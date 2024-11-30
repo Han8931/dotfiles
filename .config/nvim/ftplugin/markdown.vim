@@ -1,6 +1,6 @@
 vmap <c-m> di**<Esc>pa**
 
-inoremap ;PRG ```<++><Enter>```<Esc>3k
+inoremap ;PRG ```<++><Enter>```<Esc>2k
 
 inoremap [] []<++><Esc>4hi
 inoremap () ()<++><Esc>4hi
