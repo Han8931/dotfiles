@@ -55,7 +55,7 @@ map a :push %mkdir<space>
 map gp :cd ;
 map gm :cd ~/Han/
 map gl :cd ~/Han/LectureVideos/
-map gc :cd /home/han/Han/CodingPractice 
+map gc :cd /home/han/Han/coding_notes
 map gb :cd /home/han/Books
 map gn :cd /home/han/Han/StudyNotes
 map gp :cd /home/han/Papers
