@@ -52,6 +52,8 @@ map O $mimeopen --ask $f
 
 cmd open &{{
     case $(file --mime-type -Lb $f) in
+        image/*)
+            setsid -f vimiv $fx >/dev/null 2>&1 ;;
         image/vnd.djvu|application/pdf|application/octet-stream)
             setsid -f zathura $fx >/dev/null 2>&1 ;;
         text/*)
