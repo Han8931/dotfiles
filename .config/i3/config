@@ -41,7 +41,8 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-#exec --no-startup-id volumeicon
+# exec --no-startup-id volumeicon &
+exec volumeicon
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pa-applet
@@ -423,7 +424,7 @@ mode "$mode_gaps_outer" {
 }
 
 # Custom
-bindsym $mod+Shift+x exec --no-startup-id blurlock
+bindsym $mod+Shift+x exec --no-startup-id i3lock
 bindsym $mod+m move workspace to output left
 bindsym $mod+c exec --no-startup-id qutebrowser
 exec_always --no-startup-id setxkbmap -layout us -option caps:escape

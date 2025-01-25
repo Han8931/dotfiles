@@ -17,6 +17,6 @@ ln -s /home/han/.dotfiles/.bashrc /home/han/
 ln -s /home/han/.dotfiles/.bash_profile /home/han/
 
 ln -s /home/han/.dotfiles/golink /usr/bin/
-ln -s /home/han/.dotfiles/empty_trash /home/han/.local/bin/
-ln -s /home/han/.dotfiles/config_edit /home/han/.local/bin/
-ln -s /home/han/.dotfiles/usb-mount /home/han/.local/bin/
+ln -s /home/han/.dotfiles/empty_trash /usr/bin/
+ln -s /home/han/.dotfiles/config_edit /usr/bin/
+ln -s /home/han/.dotfiles/usb-mount /usr/bin/
