@@ -41,13 +41,26 @@ map O $mimeopen --ask $f
 # This command is called when current file is not a directory. You may want to
 # use either file extensions and/or mime types here. Below uses an editor for
 # text files and a file opener for the rest.
+# cmd open &{{
+#     case $(file --mime-type -Lb $f) in
+# 		image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
+#         text/*) lf -remote "send $id \$$EDITOR \$fx";;
+#         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+#     esac
+# }}
+
 cmd open &{{
     case $(file --mime-type -Lb $f) in
-		image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
-        text/*) lf -remote "send $id \$$EDITOR \$fx";;
-        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+        image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
+        video/*) 
+            setsid -f mpv $fx >/dev/null 2>&1 ;;
+        text/*) 
+            lf -remote "send $id \$$EDITOR \$fx";;
+        *) 
+            for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
+
 
 # mkdir command. See wiki if you want it to select created dir
 map a :push %mkdir<space>
