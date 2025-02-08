@@ -76,6 +76,8 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'tpope/vim-surround'
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+	Plug 'NeogitOrg/neogit', {'branch': 'master'}
+	Plug 'sindrets/diffview.nvim', {'branch': 'main'}
 
 	" Just install sudo pacman -S ripgrep  " To use ripgrep
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
