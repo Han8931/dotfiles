@@ -75,6 +75,7 @@ call plug#begin()
     Plug 'windwp/nvim-autopairs'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-fugitive'
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	Plug 'NeogitOrg/neogit', {'branch': 'master'}
 	Plug 'sindrets/diffview.nvim', {'branch': 'main'}
