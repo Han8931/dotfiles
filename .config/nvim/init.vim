@@ -81,6 +81,7 @@ call plug#begin()
 
 	" Just install sudo pacman -S ripgrep  " To use ripgrep
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
 
     Plug 'nvim-lua/plenary.nvim'
 

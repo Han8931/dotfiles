@@ -10,3 +10,5 @@ startx
 fi
 
 TZ='Asia/Seoul'; export TZ
+
+. "$HOME/.local/bin/env"
