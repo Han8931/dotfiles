@@ -9,3 +9,4 @@ blog https://han8931.github.io/
 drive https://drive.google.com/drive/u/0/my-drive
 libgen https://libgen.is/search.php?req=
 deepseek https://chat.deepseek.com/
+leetcode https://leetcode.com/
