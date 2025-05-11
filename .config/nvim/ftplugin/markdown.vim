@@ -1,12 +1,10 @@
-vmap <c-m> di**<Esc>pa**
+vmap <c-m> di`<Esc>pa`
 
 inoremap [] []<++><Esc>4hi
 inoremap () ()<++><Esc>4hi
 inoremap `` ``<++><Esc>4hi
 inoremap __ __<++><Esc>4hi
 " inoremap ** ****<++><Esc>5hi
-
-vmap <c-m> di$<Esc>pa$
 
 iabbrev == &=
 
