@@ -1,5 +1,6 @@
 command R w|!go run ./%
 
+iabbrev == :=
 iabbrev printf fmt.Printf("<++>: %v\n",<++>)<Esc>20h
 iabbrev println fmt.Println(<++>)<Esc>15h
 "
