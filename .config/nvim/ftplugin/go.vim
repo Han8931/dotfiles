@@ -3,7 +3,7 @@ command R w|!go run ./%
 " iabbrev pset breakpoint(s)<Esc>1hx
 " " iabbrev <expr> pset 'breakpoint()' . "\<Esc>F(i"
 iabbrev printf fmt.Print("<++>: %v",<++>)<Esc>20h
-iabbrev println fmt.Prinln(<++>)<Esc>15h
+iabbrev println fmt.Println(<++>)<Esc>15h
 
 
 " inoremap ;PERF start_t = time.perf_counter()<Enter>print(<++>)<Enter>elapsed_t = time.perf_counter() - start_t<Enter>print(f"{<++>.__name__}: {datetime.timedelta(elapsed_t)}")<++>
