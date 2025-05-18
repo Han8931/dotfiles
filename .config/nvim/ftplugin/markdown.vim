@@ -41,7 +41,7 @@ inoremap $$ $$<++><Esc>4hi
 " inoremap {} {<++>}<Esc>/<++><Enter>"_c4l
 " inoremap {} {<++>}<++><Esc>/<++><Enter>"_c4l
 
-inoremap ;` ```<++><Enter><++><Enter>```<Enter><++><Esc>4k
+inoremap ;` ```<++><Enter><++><Enter>```<Enter><++><Esc>3k0
 inoremap ;/ \frac{}{<++>}<Esc><Esc>F{F{a
 inoremap ;M \sum_{}^{<++>}<Esc><Esc>F{F{a
 inoremap ;EFI \begin{figure}[<++>]<Enter>\centering<Enter>\includegraphics[scale=<++>]{./images/<++>}<Enter>\caption{<++>}<Enter>\label{fig:<++>}<Enter>\end{figure}<Esc>5k
