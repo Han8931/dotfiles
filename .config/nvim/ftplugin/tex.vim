@@ -18,6 +18,7 @@ inoremap ;r \rho
 inoremap ;s \sigma
 inoremap ;S \Sigma
 inoremap ;i \infty
+inoremap ;k \kappa
 
 inoremap ;SSS \subsection{<++>}<Esc>5h
 inoremap ;SSE \section{<++>}<Enter>\label{sec:<++>}<++><Esc>1k0
