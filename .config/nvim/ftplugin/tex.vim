@@ -29,6 +29,7 @@ inoremap \left( \left(\right)<++><Esc>10hi
 inoremap \left[ \left[\right]<++><Esc>10hi
 
 inoremap \{ \{\}<++><Esc>5hi
+inoremap \| \|\|<++><Esc>5hi
 inoremap {} {}<++><Esc>4hi
 inoremap () ()<++><Esc>4hi
 inoremap [] []<++><Esc>4hi
