@@ -25,11 +25,12 @@ inoremap ;SSE \section{<++>}<Enter>\label{sec:<++>}<++><Esc>1k0
 
 inoremap ;BRB \bigg(<+bbr+>\bigg)<++><Esc>/<+bbr+><Enter>"_c7l
 inoremap ;BSB \bigg[<+bsr+>\bigg]<++><Esc>/<+bsr+><Enter>"_c7l
-inoremap \left( \left(\right)<++><Esc>10hi
-inoremap \left[ \left[\right]<++><Esc>10hi
 
-inoremap \{ \{\}<++><Esc>5hi
-inoremap \| \|\|<++><Esc>5hi
+inoremap \( \left(\right)<++><Esc>10hi
+inoremap \[ \left[\right]<++><Esc>10hi
+
+inoremap \{ \left\{\right\}<++><Esc>11hi
+inoremap \| left\|\right\|<++><Esc>10hi
 inoremap {} {}<++><Esc>4hi
 inoremap () ()<++><Esc>4hi
 inoremap [] []<++><Esc>4hi
