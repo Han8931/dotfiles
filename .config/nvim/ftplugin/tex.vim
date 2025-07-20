@@ -28,9 +28,10 @@ inoremap ;BSB \bigg[<+bsr+>\bigg]<++><Esc>/<+bsr+><Enter>"_c7l
 
 inoremap \( \left(\right)<++><Esc>10hi
 inoremap \[ \left[\right]<++><Esc>10hi
-
+inoremap \< \left<\right><++><Esc>10hi
 inoremap \{ \left\{\right\}<++><Esc>11hi
 inoremap \| left\|\right\|<++><Esc>10hi
+
 inoremap {} {}<++><Esc>4hi
 inoremap () ()<++><Esc>4hi
 inoremap [] []<++><Esc>4hi
