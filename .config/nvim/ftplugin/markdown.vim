@@ -66,3 +66,5 @@ inoremap ;FIT \textit{<++>}<Esc>/<++><Enter>"_c4l
 inoremap ;MBF \mathbf{<++>}<Esc>/<++><Enter>"_c4l
 inoremap ;MCA \mathcal{<++>}<Esc>/<++><Enter>"_c4l
 inoremap ;MBB \mathbb{<++>}<Esc>/<++><Enter>"_c4l
+
+
