@@ -79,9 +79,12 @@ call plug#begin()
 	Plug 'NeogitOrg/neogit', {'branch': 'master'}
 	Plug 'sindrets/diffview.nvim', {'branch': 'main'}
 
+	Plug 'nvim-telescope/telescope.nvim'
 	" Just install sudo pacman -S ripgrep  " To use ripgrep
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
+	" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	" Plug 'junegunn/fzf.vim'
+	
+	Plug 'nvim-lua/plenary.nvim'
 	Plug 'tpope/vim-fugitive'
 
     Plug 'nvim-lua/plenary.nvim'
@@ -151,9 +154,15 @@ inoremap <c-s> ]s
 nnoremap <c-s> ]s
 
 nnoremap ,<space> :nohlsearch<CR>
-map <leader>g :Rg<CR>
-map <leader>f :FZF<CR>
 map <leader>t :Tagbar<CR>
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" map <leader>g :Rg<CR>
+" map <leader>f :FZF<CR>
+
 " map <leader>p :highlight Normal guibg=none<CR>
 " map <leader>h :highlight Normal guibg=#2e3440<CR>
 
