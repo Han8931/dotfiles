@@ -60,6 +60,7 @@ inoremap ;ETA \begin{table}[<++>]<Enter>\setlength{\tabcolsep}{<++>pt}<Enter>\ca
 	
 inoremap ;FBF \textbf{<++>}<Esc>/<++><Enter>"_c4l
 inoremap ;FIT \textit{<++>}<Esc>/<++><Enter>"_c4l
+inoremap ;FTT \texttt{<++>}<Esc>/<++><Enter>"_c4l
 
 inoremap ;MBF \mathbf{<++>}<Esc>/<++><Enter>"_c4l
 inoremap ;MCA \mathcal{<++>}<Esc>/<++><Enter>"_c4l
