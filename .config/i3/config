@@ -119,7 +119,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # split orientation
 bindsym $mod+n split h;exec notify-send 'tile horizontally'
 bindsym $mod+b split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+# bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -441,7 +441,7 @@ mode "$mode_gaps_outer" {
 # Custom
 bindsym $mod+Shift+x exec --no-startup-id i3lock
 bindsym $mod+m move workspace to output left
-bindsym $mod+c exec --no-startup-id qutebrowser
+# bindsym $mod+c exec --no-startup-id qutebrowser
 exec_always --no-startup-id setxkbmap -layout us -option caps:escape
 exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of eDP
 # exec_always --no-startup-id sh ~/.config/i3/polybar.sh

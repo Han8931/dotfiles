@@ -1,5 +1,10 @@
 vmap <c-m> di`<Esc>pa`
 
+" nnoremap <silent> <leader>+" :%s/[‘’]/'/ge \| %s/[“”‟]/"/ge<CR>
+
+" Example if Ctrl+" shows up as ^B (i.e., <C-b>)
+nnoremap <silent> <C-b> :%s,[‘’],',ge \| %s,[“”‟],",ge<CR>
+
 inoremap [] []<++><Esc>4hi
 inoremap () ()<++><Esc>4hi
 inoremap `` ``<++><Esc>4hi

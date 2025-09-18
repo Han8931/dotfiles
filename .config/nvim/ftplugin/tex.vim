@@ -1,5 +1,6 @@
 vmap <c-m> di$<Esc>pa$
 
+nnoremap <silent> <C-b> :%s,[‘’],',ge \| %s,[“”‟],",ge<CR>
 iabbrev == &=
 
 nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
