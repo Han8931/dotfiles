@@ -1,8 +1,17 @@
 vmap <c-m> di`<Esc>pa`
 
+" italic with *...*
+let g:surround_42 = "*\r*"        " 42 = '*'
+
+" bold with **...**
+let g:surround_98 = "**\r**"      " 98 = 'b'  (trigger with 'b')
+" (alternative) use 'B' instead of 'b'
+" let g:surround_66 = "**\r**"    " 66 = 'B'
+
+
+
 " nnoremap <silent> <leader>+" :%s/[‘’]/'/ge \| %s/[“”‟]/"/ge<CR>
 
-" Example if Ctrl+" shows up as ^B (i.e., <C-b>)
 nnoremap <silent> <C-b> :%s,[‘’],',ge \| %s,[“”‟],",ge<CR>
 
 inoremap [] []<++><Esc>4hi
