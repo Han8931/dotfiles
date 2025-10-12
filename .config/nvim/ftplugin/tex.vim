@@ -49,7 +49,7 @@ inoremap ;EQA \begin{equation}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{equat
 inoremap ;EQN \begin{equation*}<Enter><++><Enter>\end{equation*}<++><Esc>2k
 inoremap ;PRG \begin{lstlisting}[language=Python]<Enter><++><Enter>\end{lstlisting}<Enter><++><Esc>4k
 inoremap ;THE \begin{theorem}{<++>}<Enter><++><Enter>\end{theorem}<++><Esc>3k
-inoremap ;EXA \begin{commentbox}{Example}<Enter><++><Enter>\end{commentbox}<Esc>3k
+inoremap ;ECM \begin{commentbox}{<++>}<Enter><++><Enter>\end{commentbox}<Esc>3k
 
 inoremap ;MAT \begin{bmatrix}<Enter><++><Enter>\end{bmatrix}<Esc>2k
 inoremap ;CAS \begin{cases}<Enter><++>&\text{<++>}\\<Enter><++>&\text{<++>}<Enter>\end{cases}<Enter><++><Esc>4k
@@ -59,10 +59,14 @@ inoremap ;ALG \begin{algorithm}[<++>]<Enter>\begin{algorithmic}[1]<Enter>\State 
 inoremap ;ENV \begin{<++>}<Enter>\end{<++>}<++><Esc>2k
 inoremap ;EFR \begin{frame}{<++>}<Enter>\end{frame}<++><Esc>2k
 inoremap ;ETA \begin{table}[<++>]<Enter>\setlength{\tabcolsep}{<++>pt}<Enter>\caption{<++>}<Enter>\label{table:<++>}<Enter>\centering<Enter>\begin{tabular}{<++>llc}<Enter>\toprule<Enter>\midrule<Enter>\cmidrule(r){1-2}<Enter>\bottomrule<Enter>\end{tabular}<Enter>\end{table}<++><Esc>12k
+
+inoremap ;TAB \begin{table}[h]<Enter>\setlength{\tabcolsep}{4pt}<Enter>\caption{<++>}<Enter>\centering<Enter>\begin{tabular}{lr}<Enter>\toprule<Enter> & \\<Enter>\midrule<Enter> & \\<Enter>\multirow{2}{*}{text} & text \\<Enter> & \\<Enter>\bottomrule <Enter>\end{tabular}<Enter>\end{table}<Enter><++><Esc>15k
+
 	
 inoremap ;FBF \textbf{<++>}<Esc>/<++><Enter>"_c4l
 inoremap ;FIT \textit{<++>}<Esc>/<++><Enter>"_c4l
 inoremap ;FTT \texttt{<++>}<Esc>/<++><Enter>"_c4l
+inoremap ;FSC \textsc{<++>}<Esc>/<++><Enter>"_c4l
 
 inoremap ;MBF \mathbf{<++>}<Esc>/<++><Enter>"_c4l
 inoremap ;MCA \mathcal{<++>}<Esc>/<++><Enter>"_c4l
