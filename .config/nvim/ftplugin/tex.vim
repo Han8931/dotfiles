@@ -49,7 +49,7 @@ inoremap ;EQA \begin{equation}<Enter><++><Enter>\label{eq:<++>}<Enter>\end{equat
 inoremap ;EQN \begin{equation*}<Enter><++><Enter>\end{equation*}<++><Esc>2k
 inoremap ;PRG \begin{lstlisting}[language=Python]<Enter><++><Enter>\end{lstlisting}<Enter><++><Esc>4k
 inoremap ;THE \begin{theorem}{<++>}<Enter><++><Enter>\end{theorem}<++><Esc>3k
-inoremap ;ECM \begin{commentbox}{<++>}<Enter><++><Enter>\end{commentbox}<Esc>3k
+inoremap ;BOX \begin{commentbox}{<++>}<Enter><++><Enter>\end{commentbox}<Esc>3k
 
 inoremap ;MAT \begin{bmatrix}<Enter><++><Enter>\end{bmatrix}<Esc>2k
 inoremap ;CAS \begin{cases}<Enter><++>&\text{<++>}\\<Enter><++>&\text{<++>}<Enter>\end{cases}<Enter><++><Esc>4k

@@ -1,10 +1,11 @@
 vmap <c-m> di`<Esc>pa`
 
-" italic with *...*
+" In visual mode: S* 
 let g:surround_42 = "*\r*"        " 42 = '*'
 
-" bold with **...**
+" In visual mode: Sb
 let g:surround_98 = "**\r**"      " 98 = 'b'  (trigger with 'b')
+"
 " (alternative) use 'B' instead of 'b'
 " let g:surround_66 = "**\r**"    " 66 = 'B'
 
