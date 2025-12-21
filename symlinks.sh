@@ -1,4 +1,5 @@
-cp -rs /home/han/.dotfiles/.config/lf /home/han/.config/ 
+cp -rs /home/han/.dotfiles/.config/lf /home/han/.config/
+cp -rs /home/han/.dotfiles/.config/lf/icons /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/nvim /home/han/.config/ 
 cp -rs /home/han/.dotfiles/.config/zathura /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/i3 /home/han/.config/

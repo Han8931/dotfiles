@@ -12,3 +12,4 @@ deepseek,https://chat.deepseek.com/
 leetcode,https://leetcode.com/
 claude,https://claude.ai/new
 google search console,https://search.google.com/search-console/about
+gemini,https://gemini.google.com/app

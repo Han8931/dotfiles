@@ -1,5 +1,6 @@
 # interpreter for shell commands
 set shell sh
+set icons
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
@@ -172,10 +173,14 @@ cmd zip ${{
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
+# set previewer '~/.config/lf/scope'
+
+set drawbox true   # optional, but often nice
 
 set previewer ctpv
 set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
+
 
 
