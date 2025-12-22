@@ -1,7 +1,8 @@
 vmap <c-m> di`<Esc>pa`
 
-" In visual mode: S* 
-let g:surround_42 = "*\r*"        " 42 = '*'
+" " In visual mode: Si 
+" Define 'i' as a custom surround for underscores
+let g:surround_105 = "_\r_"       " 105 is the ASCII code for 'i'
 
 " In visual mode: Sb
 let g:surround_98 = "**\r**"      " 98 = 'b'  (trigger with 'b')
