@@ -14,8 +14,10 @@ ln -s /home/han/.dotfiles/.gitconfig /home/han/
 ln -s /home/han/.dotfiles/.xinitrc /home/han/
 ln -s /home/han/.dotfiles/.Xmodmap /home/han/
 ln -s /home/han/.dotfiles/.Xresources /home/han/
-ln -s /home/han/.dotfiles/.bashrc /home/han/
-ln -s /home/han/.dotfiles/.bash_profile /home/han/
+# ln -s /home/han/.dotfiles/.bashrc /home/han/
+# ln -s /home/han/.dotfiles/.bash_profile /home/han/
+ln -s /home/han/.dotfiles/.zshrc /home/han/
+ln -s /home/han/.dotfiles/.zprofile /home/han/
 
 ln -s /home/han/.dotfiles/golink /usr/bin/
 ln -s /home/han/.dotfiles/empty_trash /usr/bin/
