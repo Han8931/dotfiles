@@ -173,12 +173,10 @@ cmd zip ${{
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
-# set previewer '~/.config/lf/scope'
-
 set drawbox true   # optional, but often nice
 
-set previewer ctpv
-set cleaner ctpvclear
+# set previewer ctpv
+# set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
 

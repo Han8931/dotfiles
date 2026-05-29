@@ -45,9 +45,6 @@ setopt auto_cd
 setopt correct
 setopt no_beep
 
-# Vi mode
-bindkey -v
-
 # Colors
 autoload -Uz colors
 colors
@@ -187,3 +184,11 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# Vi mode
+bindkey -v
+
+# Open current command line in $EDITOR with Esc + v
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
