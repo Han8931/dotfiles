@@ -22,9 +22,12 @@ XTerm*selectToClipboard: true
 *pointerColorBackground:          #2B2C2B
 *pointerColorForeground:          #16A085
 
+! *.alpha: .81
+! ! *.font:	Liberation Mono:pixelsize=24:antialias=true:autohint=true;
+! *.font: mono:pixelsize=24:antialias=true:autohint=true
+
 *.alpha: .81
-! *.font:	Liberation Mono:pixelsize=24:antialias=true:autohint=true;
-*.font: mono:pixelsize=24:antialias=true:autohint=true
+*.font: Iosevka Nerd Font Mono:pixelsize=24:antialias=true:autohint=true
 
 !! black dark/light
 *color0:                          #222D31
