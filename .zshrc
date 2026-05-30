@@ -194,3 +194,15 @@ bindkey -v
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+
+# precmd() {
+#     print -Pn "\e]0;%~\a"
+# }
+
+preexec() {
+    print -Pn "\e]0;$1\a"
+}
+
+precmd() {
+    print -Pn "\e]0;%n@%m:%~\a"
+}
