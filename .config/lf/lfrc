@@ -84,11 +84,11 @@ cmd open &{{
 map a :push %mkdir<space>
 
 # map gp :cd ;
-map gm :cd ~/Han/
 map gc :cd /home/han/Han/coding_notes
 map gb :cd /home/han/MEGA/Books
 map gn :cd /home/han/Han/StudyNotes
 map gp :cd /home/han/Project
+map gr :cd /home/han/Research/
 map gl :cd /home/han/leetcode_wizard
 
 # define a custom 'rename' command without prompt for overwrite

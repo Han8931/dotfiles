@@ -27,7 +27,9 @@ XTerm*selectToClipboard: true
 ! *.font: mono:pixelsize=24:antialias=true:autohint=true
 
 *.alpha: .81
-*.font: Iosevka Nerd Font Mono:pixelsize=24:antialias=true:autohint=true
+*.font: Iosevka Nerd Font Mono:pixelsize=26:antialias=true:autohint=true
+
+st.font: JetBrainsMono Nerd Font Mono:pixelsize=20:antialias=true:autohint=false
 
 !! black dark/light
 *color0:                          #222D31
