@@ -69,7 +69,18 @@ call plug#begin()
     Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'windwp/nvim-autopairs'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'mason-org/mason.nvim'
+	Plug 'mason-org/mason-lspconfig.nvim'
+
+	Plug 'hrsh7th/nvim-cmp'
+	Plug 'hrsh7th/cmp-nvim-lsp'
+	Plug 'hrsh7th/cmp-buffer'
+	Plug 'hrsh7th/cmp-path'
+	Plug 'L3MON4D3/LuaSnip'
+	Plug 'saadparwaiz1/cmp_luasnip'"
 
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
@@ -84,6 +95,93 @@ call plug#begin()
     Plug 'sindrets/diffview.nvim'
 call plug#end()
 
+lua << EOF
+require("mason").setup()
+
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "lua_ls",
+    "gopls",
+    "pyright",
+    "ts_ls",
+    "clangd",
+  },
+})
+
+local cmp = require("cmp")
+local luasnip = require("luasnip")
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+
+  mapping = cmp.mapping.preset.insert({
+    ["<C-Space>"] = cmp.mapping.complete(),
+
+    ["<CR>"] = cmp.mapping.confirm({
+      select = true,
+    }),
+
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+  }),
+
+  sources = {
+    { name = "nvim_lsp" },
+    { name = "luasnip" },
+    { name = "buffer" },
+    { name = "path" },
+  },
+})
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "gr", vim.lsp.buf.references)
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>f", function()
+  vim.lsp.buf.format({ async = true })
+end)
+
+vim.lsp.enable({
+  "lua_ls",
+  "gopls",
+  "pyright",
+  "ts_ls",
+  "clangd",
+})
+EOF
+
+
+
 colorscheme onenord
 
 " NERDTree
@@ -96,19 +194,19 @@ if has('nvim')
     let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
 endif
 
-" CoC completion
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+" " CoC completion
+" inoremap <silent><expr> <TAB>
+"       \ coc#pum#visible() ? coc#pum#next(1) :
+"       \ CheckBackspace() ? "\<Tab>" :
+"       \ coc#refresh()
+"
+" inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+" function! CheckBackspace() abort
+"     let col = col('.') - 1
+"     return !col || getline('.')[col - 1] =~# '\s'
+" endfunction
 
-function! CheckBackspace() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1] =~# '\s'
-endfunction
-
-inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Split navigation
 nnoremap <C-h> <C-w>h
