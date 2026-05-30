@@ -20,7 +20,7 @@
 "         \::/    /                \::/    /                \::/    /        
 "          \/____/                  \/____/                  \/____/         
 "
-"   2023. 08. 31
+"   2026. 05. 30
 "
 "
 let mapleader=","
@@ -193,20 +193,6 @@ autocmd bufenter * if winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTa
 if has('nvim')
     let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
 endif
-
-" " CoC completion
-" inoremap <silent><expr> <TAB>
-"       \ coc#pum#visible() ? coc#pum#next(1) :
-"       \ CheckBackspace() ? "\<Tab>" :
-"       \ coc#refresh()
-"
-" inoremap <expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-" inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-" function! CheckBackspace() abort
-"     let col = col('.') - 1
-"     return !col || getline('.')[col - 1] =~# '\s'
-" endfunction
-
 
 " Split navigation
 nnoremap <C-h> <C-w>h
