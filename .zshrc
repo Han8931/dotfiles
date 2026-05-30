@@ -157,6 +157,9 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export BROWSER='qutebrowser'
 
+
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 # # Rust/Cargo
 # [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
