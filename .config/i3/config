@@ -73,8 +73,6 @@ bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -291,7 +289,11 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+
+# bindsym $mod+t exec --no-startup-id pkill picom
+# bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+exec_always --no-startup-id pkill picom; picom -b
+
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -436,7 +438,9 @@ mode "$mode_gaps_outer" {
 }
 
 # Custom
-bindsym $mod+Shift+x exec --no-startup-id i3lock
+# bindsym $mod+Shift+x exec --no-startup-id i3lock
+# bindsym $mod+Shift+x exec i3lock -i ~/.cache/lockscreen.png
+bindsym $mod+Shift+x exec betterlockscreen -l
 bindsym $mod+m move workspace to output left
 # bindsym $mod+c exec --no-startup-id qutebrowser
 exec_always --no-startup-id setxkbmap -layout us -option caps:escape
@@ -444,4 +448,5 @@ exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --left-of eDP
 # exec_always --no-startup-id sh ~/.config/i3/polybar.sh
 
 exec_always --no-startup-id ibus-daemon -d -r -x 
+exec_always --no-startup-id feh --bg-fill ~/Wallpaper/arch_wall.jpg
 

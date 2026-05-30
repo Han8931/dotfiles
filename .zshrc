@@ -176,8 +176,7 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats ' %F{magenta}(%b)%f'
 
 setopt PROMPT_SUBST
-
-PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f${vcs_info_msg_0_}%F{green}]$%f '
+PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f %F{blue}%1~%f${vcs_info_msg_0_}%F{green}]$%f '
 
 [[ -f ~/.ls_colors ]] && export LS_COLORS="$(cat ~/.ls_colors)"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
