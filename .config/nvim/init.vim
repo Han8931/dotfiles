@@ -93,6 +93,8 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
     Plug 'NeogitOrg/neogit'
     Plug 'sindrets/diffview.nvim'
+
+	Plug 'lervag/vimtex'
 call plug#end()
 
 lua << EOF

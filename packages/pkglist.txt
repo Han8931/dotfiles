@@ -23,11 +23,13 @@ grub
 i3-wm
 i3lock-color
 i3status
+ibus-hangul
 imagemagick
 intel-ucode
 kitty
 lf
 libnotify
+libreoffice-fresh
 linux
 linux-firmware
 man-db
@@ -50,6 +52,7 @@ picom
 pipewire
 pipewire-alsa
 pipewire-pulse
+polybar
 ripgrep
 sudo
 tailscale
