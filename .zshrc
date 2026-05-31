@@ -62,19 +62,6 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
-# Window title
-case "$TERM" in
-  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-    precmd() {
-      print -Pn "\e]0;%n@%m:%~\a"
-    }
-    ;;
-  screen*)
-    precmd() {
-      print -Pn "\ek%n@%m:%~\e\\"
-    }
-    ;;
-esac
 
 # Allow root GUI apps locally
 xhost +local:root > /dev/null 2>&1
@@ -171,15 +158,13 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 autoload -Uz vcs_info
 
-precmd() {
-    vcs_info
-}
+# precmd() {
+#     vcs_info
+# }
 
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats ' %F{magenta}(%b)%f'
 
-setopt PROMPT_SUBST
-PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f %F{blue}%1~%f${vcs_info_msg_0_}%F{green}]$%f '
 
 [[ -f ~/.ls_colors ]] && export LS_COLORS="$(cat ~/.ls_colors)"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -191,18 +176,20 @@ source /usr/share/fzf/completion.zsh
 bindkey -v
 
 # Open current command line in $EDITOR with Esc + v
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
 
-# precmd() {
-#     print -Pn "\e]0;%~\a"
-# }
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats ' %F{magenta}(%b)%f'
 
 preexec() {
     print -Pn "\e]0;$1\a"
 }
 
 precmd() {
+    vcs_info
     print -Pn "\e]0;%n@%m:%~\a"
 }
+
+setopt PROMPT_SUBST
+PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f %F{blue}%1~%f${vcs_info_msg_0_}%F{green}]$%f '
+
