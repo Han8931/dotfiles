@@ -6,6 +6,7 @@ cp -rs /home/han/.dotfiles/.config/i3 /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/mpv /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/picom /home/han/.config/
 cp -rs /home/han/.dotfiles/.config/mimeapps.list /home/han/.config/
+cp -rs /home/han/.dotfiles/.config/polybar /home/han/.config/
 
 
 ln -s /home/han/.dotfiles/pacman.conf /etc/

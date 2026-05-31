@@ -125,7 +125,7 @@ alias wifi='nmtui'
 alias bluetooth='bluetoothctl'
 alias volume='pulsemixer'
 alias calc='calcurse'
-alias pgrep='pdfgrep -HiR --color=auto'
+# alias pgrep='pdfgrep -HiR --color=auto'
 
 alias newterm='st >/dev/null 2>&1 & disown'
 alias arxivpdf='process-arxiv-pdf'

@@ -1,4 +1,4 @@
-"           _____                    _____                    _____          
+""           _____                    _____                    _____          
 "          /\    \                  /\    \                  /\    \         
 "         /::\____\                /::\    \                /::\____\        
 "        /:::/    /               /::::\    \              /::::|   |        
@@ -80,7 +80,7 @@ call plug#begin()
 	Plug 'hrsh7th/cmp-buffer'
 	Plug 'hrsh7th/cmp-path'
 	Plug 'L3MON4D3/LuaSnip'
-	Plug 'saadparwaiz1/cmp_luasnip'"
+	Plug 'saadparwaiz1/cmp_luasnip'
 
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
@@ -162,8 +162,34 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "gr", vim.lsp.buf.references)
+local function has_lsp_method(method)
+  local clients = vim.lsp.get_clients({ bufnr = 0 })
+
+  for _, client in ipairs(clients) do
+    if client:supports_method(method) then
+      return true
+    end
+  end
+
+  return false
+end
+
+vim.keymap.set("n", "gd", function()
+  if has_lsp_method("textDocument/definition") then
+    vim.lsp.buf.definition()
+  else
+    vim.cmd("normal! gd")
+  end
+end, { desc = "Go to definition" })
+
+vim.keymap.set("n", "gr", function()
+  if has_lsp_method("textDocument/references") then
+    vim.lsp.buf.references()
+  else
+    vim.cmd("normal! gr")
+  end
+end, { desc = "Go to references" })
+
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
