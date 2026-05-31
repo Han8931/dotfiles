@@ -42,26 +42,34 @@ map O $mimeopen --ask $f
 # This command is called when current file is not a directory. You may want to
 # use either file extensions and/or mime types here. Below uses an editor for
 # text files and a file opener for the rest.
-cmd open &{{
-    case $(file --mime-type -Lb $f) in
+cmd open ${{
+    case $(file --mime-type -Lb "$f") in
+
         image/svg+xml)
-            setsid -f inkscape $fx >/dev/null 2>&1 ;;
-        # (optional) some systems mislabel .svg as application/xml; use ext as fallback
-        application/xml)
-            case "$f" in
-                *.svg|*.svgz) setsid -f inkscape $fx >/dev/null 2>&1 ;;
-                *) ;; 
-            esac ;;
+            setsid -f inkscape "$f" >/dev/null 2>&1 ;;
+
         image/*)
-            setsid -f vimiv $fx >/dev/null 2>&1 ;;
-		image/vnd.djvu|application/pdf)
-            setsid -f zathura $fx >/dev/null 2>&1 ;;
-        text/*)
-            lf -remote "send $id \$$EDITOR \$fx";;
+            setsid -f vimiv "$f" >/dev/null 2>&1 ;;
+
+        image/vnd.djvu|application/pdf)
+            setsid -f zathura "$f" >/dev/null 2>&1 ;;
+
+        text/*|application/json|application/xml|application/x-shellscript)
+            /usr/bin/nvim "$f" ;;
+
         video/*|audio/*)
-            for f in $fx; do setsid -f mpv "$f" >/dev/null 2>&1 & done;;
+            for file in $fx; do
+                setsid -f mpv "$file" >/dev/null 2>&1 &
+            done ;;
+
         *)
-            for f in $fx; do $OPENER "$f" >/dev/null 2>/dev/null & done;;
+            case "$f" in
+                *.sh|*.bash|*.zsh|*.fish|*.py|*.go|*.rs|*.c|*.h|*.cpp|*.hpp|*.java|*.js|*.ts|*.jsx|*.tsx|*.html|*.css|*.scss|*.json|*.yaml|*.yml|*.toml|*.lua|*.vim|*.tex|*.md|*.txt|*.conf|*.ini|*.service|*.desktop|*.sql)
+                    /usr/bin/nvim "$f" ;;
+                *)
+                    "$OPENER" "$f" >/dev/null 2>&1 &
+                    ;;
+            esac ;;
     esac
 }}
 
