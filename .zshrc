@@ -178,8 +178,9 @@ bindkey -v
 # Open current command line in $EDITOR with Esc + v
 
 autoload -Uz vcs_info
+
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' formats ' %F{magenta}(%b)%f'
+zstyle ':vcs_info:git:*' formats ' %b'
 
 preexec() {
     print -Pn "\e]0;$1\a"
@@ -187,9 +188,18 @@ preexec() {
 
 precmd() {
     vcs_info
+
+    if [[ -n "$vcs_info_msg_0_" ]]; then
+        git_prompt="%F{magenta}${vcs_info_msg_0_}%f"
+    else
+        git_prompt=""
+    fi
+
     print -Pn "\e]0;%n@%m:%~\a"
 }
 
 setopt PROMPT_SUBST
-PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f %F{blue}%1~%f${vcs_info_msg_0_}%F{green}]$%f '
 
+PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f %F{blue}%1~%f%F{green}]%f
+${git_prompt:+${git_prompt}
+}%F{cyan}❯%f '
