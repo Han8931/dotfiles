@@ -54,7 +54,7 @@ cmd open &{{
             esac ;;
         image/*)
             setsid -f vimiv $fx >/dev/null 2>&1 ;;
-        image/vnd.djvu|application/pdf|application/octet-stream)
+		image/vnd.djvu|application/pdf)
             setsid -f zathura $fx >/dev/null 2>&1 ;;
         text/*)
             lf -remote "send $id \$$EDITOR \$fx";;
@@ -103,12 +103,20 @@ map gl :cd /home/han/leetcode_wizard
 #cmd trash %set -f; mv $fx ~/.trash
 
 # define a custom 'delete' command
+# cmd delete ${{
+#     set -f
+#     printf "$fx\n"
+#     printf "Delete files?[y/n]"
+#     read ans
+#     [ "$ans" = "y" ] && rm -rf $fx
+# }}
+
 cmd delete ${{
     set -f
-    printf "$fx\n"
-    printf "Delete files?[y/n]"
+    printf '%s\n' "$fx"
+    printf 'Delete files? [y/N] '
     read ans
-    [ "$ans" = "y" ] && rm -rf $fx
+    [ "$ans" = "y" ] && rm -rf -- $fx
 }}
 
 map D delete
@@ -171,7 +179,8 @@ cmd zip ${{
 #map M moveto
 
 
-cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+# cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+cmd mkdir %mkdir -p "$@"
 
 set drawbox true   # optional, but often nice
 
