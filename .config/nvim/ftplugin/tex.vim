@@ -1,5 +1,7 @@
+
 vmap <c-m> di$<Esc>pa$
 
+set wrap
 nnoremap <silent> <C-b> :%s,[‘’],',ge \| %s,[“”‟],",ge<CR>
 iabbrev == &=
 
