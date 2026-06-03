@@ -10,8 +10,8 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*.font: JetBrainsMono Nerd Font Mono:pixelsize=26:antialias=true:autohint=true
-st.font: JetBrainsMono Nerd Font Mono:pixelsize=26:antialias=true:autohint=true
+*.font: UbuntuMono Nerd Font Mono:pixelsize=28:antialias=true
+st.font: UbuntuMono Nerd Font Mono:pixelsize=28:antialias=true
 
 ! ==================================================
 ! Appearance
