@@ -201,5 +201,4 @@ precmd() {
 setopt PROMPT_SUBST
 
 PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f %F{blue}%1~%f%F{green}]%f
-${git_prompt:+${git_prompt}
-}%F{cyan}❯%f '
+${git_prompt:+${git_prompt} }%F{cyan}❯%f '
