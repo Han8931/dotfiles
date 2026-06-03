@@ -110,7 +110,7 @@ alias vim='nvim'
 alias vmm='vim main.tex'
 alias wifi='nmtui'
 alias bluetooth='bluetoothctl'
-alias volume='pulsemixer'
+alias volume='pavucontrol'
 alias calc='calcurse'
 # alias pgrep='pdfgrep -HiR --color=auto'
 
