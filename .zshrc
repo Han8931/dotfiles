@@ -175,6 +175,12 @@ source /usr/share/fzf/completion.zsh
 # Vi mode
 bindkey -v
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+
+bindkey -M vicmd v edit-command-line
+
+
 # Open current command line in $EDITOR with Esc + v
 
 autoload -Uz vcs_info
@@ -202,3 +208,4 @@ setopt PROMPT_SUBST
 
 PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f %F{blue}%1~%f%F{green}]%f
 ${git_prompt:+${git_prompt} }%F{cyan}❯%f '
+
