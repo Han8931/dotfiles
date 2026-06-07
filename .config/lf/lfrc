@@ -55,7 +55,7 @@ cmd open ${{
             setsid -f zathura "$f" >/dev/null 2>&1 ;;
 
         text/*|application/json|application/xml|application/x-shellscript)
-            /usr/bin/nvim "$f" ;;
+            "${EDITOR:-nvim}" "$f" ;;
 
         video/*|audio/*)
             for file in $fx; do
@@ -65,7 +65,7 @@ cmd open ${{
         *)
             case "$f" in
                 *.sh|*.bash|*.zsh|*.fish|*.py|*.go|*.rs|*.c|*.h|*.cpp|*.hpp|*.java|*.js|*.ts|*.jsx|*.tsx|*.html|*.css|*.scss|*.json|*.yaml|*.yml|*.toml|*.lua|*.vim|*.tex|*.md|*.txt|*.conf|*.ini|*.service|*.desktop|*.sql)
-                    /usr/bin/nvim "$f" ;;
+                   "${EDITOR:-nvim}" "$f" ;;
                 *)
                     "$OPENER" "$f" >/dev/null 2>&1 &
                     ;;
