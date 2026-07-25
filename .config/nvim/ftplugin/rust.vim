@@ -3,9 +3,9 @@ command! -buffer R
       \ execute '!rustc '
       \ . shellescape(expand('%:p'))
       \ . ' -o '
-      \ . shellescape(expand('%:r'))
+      \ . shellescape(expand('%:p:r'))
       \ . ' && '
-      \ . shellescape(expand('%:r'))
+      \ . shellescape(expand('%:p:r'))
 
 command! -buffer C
       \ update <bar>
