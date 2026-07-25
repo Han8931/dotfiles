@@ -191,7 +191,6 @@ zstyle ':vcs_info:git:*' formats ' %b'
 preexec() {
     print -Pn "\e]0;$1\a"
 }
-
 precmd() {
     vcs_info
 
@@ -209,3 +208,11 @@ setopt PROMPT_SUBST
 PROMPT='%F{green}[%n@%F{yellow}x%F{red}y%F{cyan}z%f %F{blue}%1~%f%F{green}]%f
 ${git_prompt:+${git_prompt} }%F{cyan}❯%f '
 
+
+# Tell ctpv/lf (and other kitty-graphics apps) that st supports the kitty graphics protocol
+[ "$TERM" = st-256color ] && export KITTY_PID=$$
+
+# Prefer ~/.local/bin so the patched ctpv wins over the pacman build.
+# (Upstream ctpv's kitty draw is missing a trailing `&`, so $! is empty and it
+#  spams "printf: : invalid number" to the terminal on every image-based preview.)
+export PATH="$HOME/.local/bin:$PATH"

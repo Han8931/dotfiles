@@ -1,0 +1,6 @@
+betterlockscreen
+bluetuith
+claude-code
+ctpv-git
+i3lock-color
+yay-bin

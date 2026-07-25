@@ -2,13 +2,13 @@ alacritty
 alsa-utils
 base
 base-devel
-betterlockscreen
-bluetuith
 bluez-utils
+brightnessctl
 chafa
-claude-code
-ctpv-git
 dmenu
+docker
+docker-buildx
+docker-compose
 dunst
 efibootmgr
 entr
@@ -21,7 +21,6 @@ git
 go
 grub
 i3-wm
-i3lock-color
 i3status
 ibus-hangul
 imagemagick
@@ -45,6 +44,7 @@ noto-fonts-emoji
 noto-fonts-extra
 npm
 obsidian
+openai-codex
 openssh
 pass
 pavucontrol
@@ -61,11 +61,13 @@ texlive-fontsrecommended
 texlive-latexextra
 texlive-latexrecommended
 texlive-publishers
+texstudio
 tree
 ttf-inconsolata
 ttf-iosevka-nerd
 ttf-jetbrains-mono-nerd
 ttf-linux-libertine
+ttf-ubuntu-mono-nerd
 ueberzugpp
 unzip
 vim
@@ -77,8 +79,6 @@ xorg-xev
 xorg-xinit
 xorg-xinput
 xorg-xrandr
-yay-bin
-yay-bin-debug
 zathura
 zathura-pdf-mupdf
 zsh

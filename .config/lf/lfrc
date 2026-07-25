@@ -192,7 +192,7 @@ cmd mkdir %mkdir -p "$@"
 
 set drawbox true   # optional, but often nice
 
-set previewer ctpv
+set previewer /home/han/.dotfiles/.config/lf/ctpv-preview
 set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id

@@ -1,0 +1,6 @@
+#!/bin/sh
+# Newer lf passes the previewer 6 args: file w h x y MODE  (MODE = preview|preload).
+# ctpv 1.1 mis-reads the 6th arg as its server id (so it becomes "preview").
+# Pass only the 5 geometry args so ctpv falls back to the numeric $id (lf client
+# PID) from the environment.
+exec ctpv "$1" "$2" "$3" "$4" "$5"

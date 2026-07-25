@@ -1,8 +1,26 @@
-command R w|!./%:r
-command C w|!rustc ./%
-command Crun w|!cargo run
-command Cbuild w|!cargo build
+command! -buffer R
+      \ update <bar>
+      \ execute '!rustc '
+      \ . shellescape(expand('%:p'))
+      \ . ' -o '
+      \ . shellescape(expand('%:r'))
+      \ . ' && '
+      \ . shellescape(expand('%:r'))
 
-iabbrev main fn main() {<Enter>}
-iabbrev print println!("{<++>}",<++>);<Esc>14h
-iabbrev if if <++> {<++>}<++>else {<++>}<Esc>29h
+command! -buffer C
+      \ update <bar>
+      \ execute '!rustc ' . shellescape(expand('%:p'))
+
+command! -buffer Crun update <bar> !cargo run
+command! -buffer Cbuild update <bar> !cargo build
+
+iabbrev <buffer> main fn main() {<Enter>}
+iabbrev <buffer> print println!("{<++>}",<++>);<Esc>14h
+iabbrev <buffer> println println!("{<++>}",<++>);<Esc>14h
+iabbrev <buffer> if if <++> {<++>}<++>else {<++>}<Esc>29h
+
+inoremap <buffer> '' ''<++><Esc>4hi
+inoremap <buffer> "" ""<++><Esc>4hi
+inoremap <buffer> {} {}<++><Esc>4hi
+inoremap <buffer> () ()<++><Esc>4hi
+inoremap <buffer> [] []<++><Esc>4hi
